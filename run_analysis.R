@@ -48,4 +48,4 @@ names(meanstddata)[ncol(meanstddata)] <- "Subject"
 tidydata <- meanstddata %>% group_by(Activity, Subject) %>% summarise_all(mean)
 
 # 5.3 Exporting the data to a file
-write.table(tidydata, file = "tidydata.txt", quote = FALSE)
+write.table(tidydata, file = "tidydata.txt", quote = FALSE, row.names = FALSE)
